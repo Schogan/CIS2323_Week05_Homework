@@ -1,13 +1,44 @@
 import board.*;
-
+import java.util.Scanner;
 public class setupChessBoard{
 	public static void main(String[] args){
-		final int COUNT = 64;
+		//final int COUNT = 64;
 		
-		ChessBoard[][] Pieces  = new ChessBoard[8][8];
-		//ChessBoard[] blackPieces  = new ChessBoard[COUNT];
+		//ChessBoard[][] Pieces  = new ChessBoard[8][8];
 		
-		int countA=0;
+		char choice = 'a';
+		
+		Scanner inputDevice = new Scanner(System.in);
+		
+		System.out.println("Would you like to make a new chess board? \n");
+		choice = inputDevice.next().charAt(0);
+		inputDevice.nextLine();
+		
+		
+		boolean cont = true;
+		//Chessboard newBoard = new ChessBoard();
+		
+		
+		while(cont){
+			System.out.println("=================================== \n");
+			System.out.println("What would you like to do? \n");
+			System.out.println("y) Make a new chess board? \n");
+			System.out.println("p) Print board \n");
+			//System.out.println("c) Mark list done \n");
+			//System.out.println("d) Print count of ToDo \n");
+			System.out.println("=================================== \n");
+			
+			choice = inputDevice.next().charAt(0);
+			inputDevice.nextLine();
+			
+			if(choice=='y'){
+				new board.ChessBoard();
+			}
+			if(choice=='p'){
+				System.out.println(board.Chessboard.printBoard());
+			}
+		}
+		/*int countA=0;
 		int countB=0;
 		String type = "holder";
 		int posX=0;
@@ -43,9 +74,9 @@ public class setupChessBoard{
 		
 		for(int i=0;i<8;i++){
 			for(int j=0;j<8;j++){
-				System.out.println(Pieces[i][j].printInfo());
+				System.out.println(ChessBoard.Pieces[i][j].printInfo());
 			}
-		}
+		}*/
 				
 	}	
 }

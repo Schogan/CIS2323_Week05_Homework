@@ -2,15 +2,45 @@ package board;
 
 public class ChessBoard{
 	// Object attributes
-	//private ChessBoard[][] board = new ChessBoard[8][8]
+	private ChessBoard[][] Pieces  = new ChessBoard[8][8];
 	private String typeName;
 	private String newColor;
+	private String type;
 	private int posX;
 	private int posY;
 	private char posYChar;
 	
 	// Object Methods
-	public void ChessBoard(String p, int a, int b){
+	public void ChessBoard(){
+		
+		for(int i=0;i<8;i++){
+			for(int j=0;j<8;j++){
+				if(i==1 || i==6){
+					type = "pawn";
+				}
+				if((i==0 || i==7) && (j==0||j==7)){
+					type = "rook";
+				}
+				if((i==0 || i==7) && (j==1||j==6)){
+					type = "knight";
+				}
+				if((i==0 || i==7) && (j==2||j==5)){
+					type = "bishop";
+				}
+				if((i==0 || i==7) && j==3){
+					type = "queen";
+				}
+				if((i==0 || i==7) && j==4){
+					type = "king";
+				}
+				
+				Pieces[i][j] = new ChessBoard();
+				Pieces[i][j].makeChessBoard(type, i, j);
+					
+			}
+		}
+	}
+	public void makeChessBoard(String p, int a, int b){
 		if(a == 2 || a == 3 || a == 4 || a == 5){
 			
 		}else{
@@ -26,40 +56,19 @@ public class ChessBoard{
 		return "Piece position: " + posX + "," + posYChar;
 		
 	}
-	/*public void setBoard(int x, int y){
-		
-		board[x][y] = 
-	}*/
+	public String printBoard(){
+		for(int i=0;i<8;i++){
+			for(int j=0;j<8;j++){
+				System.out.println(Pieces[i][j].printInfo());
+			}
+		}
+	}
+	
 	public void setPosition(int x, int y){
 		posX = x+1;
 		posY = y;
 		
-		/*posX
-		if (posX == 0){
-			posX =;
-		}
-		if (posX == 1){
-			posYChar = 'B';
-		}
-		if (posX == 2){
-			posYChar = 'C';
-		}
-		if (posX == 3){
-			posYChar = 'D';
-		}
-		if (posX == 4){
-			posYChar = 'E';
-		}
-		if (posX == 5){
-			posYChar = 'F';
-		}
-		if (posX == 6){
-			posYChar = 'G';
-		}
-		if (posX == 7){
-			posYChar = 'H';
-		}*/
-		//posY
+	
 		if (posY == 0){
 			posYChar = 'A';
 		}
