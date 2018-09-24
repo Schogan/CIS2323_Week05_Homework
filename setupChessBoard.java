@@ -2,10 +2,10 @@ import board.*;
 
 public class setupChessBoard{
 	public static void main(String[] args){
-		final int COUNT = 16;
+		final int COUNT = 64;
 		
-		ChessBoard[] whitePieces  = new ChessBoard[COUNT];
-		ChessBoard[] blackPieces  = new ChessBoard[COUNT];
+		ChessBoard[][] Pieces  = new ChessBoard[8][8];
+		//ChessBoard[] blackPieces  = new ChessBoard[COUNT];
 		
 		int countA=0;
 		int countB=0;
@@ -13,35 +13,35 @@ public class setupChessBoard{
 		int posX=0;
 		int posY=0;
 		
-		while (countA<COUNT){
-			for(int i=1;i<3;i++){
+		//while (countA<){
+			for(int i=1;i<9;i++){
 				for(int j=1;j<9;j++){
-					if(i==2){
+					if(i==2 || i==7){
 						type = "pawn";
 					}
-					if(i==1 && (j==1||j==8)){
+					if((i==1 || i==8) && (j==1||j==8)){
 						type = "rook";
 					}
-					if(i==1 && (j==2||j==7)){
+					if((i==1 || i==8) && (j==2||j==7)){
 						type = "knight";
 					}
-					if(i==1 && (j==3||j==6)){
+					if((i==1 || i==8) && (j==3||j==6)){
 						type = "bishop";
 					}
-					if(i==1 && j==4){
+					if((i==1 || i==8) && j==4){
 						type = "queen";
 					}
-					if(i==1 && j==5){
+					if((i==1 || i==8) && j==5){
 						type = "king";
 					}
 					
-					whitePieces[countA] = new ChessBoard();
-					whitePieces[countA].ChessBoard("White", type, i, j);
+					Pieces[i][j] = new ChessBoard();
+					Pieces[i][j].ChessBoard(type, i, j);
 					countA++;
 				}
 			}
-		}
-		while (countB<COUNT){	
+		//}
+		/*while (countB<COUNT){	
 			for(int i=8;i>6;i--){
 				for(int j=1;j<9;j++){
 					if(i==7){
@@ -68,14 +68,16 @@ public class setupChessBoard{
 					countB++;
 				}
 			}
-		}
+		}*/
 		
-		for(int i=0;i<COUNT;i++){
-			System.out.println(whitePieces[i].printInfo());
+		for(int i=1;i<9;i++){
+			for(int j=1;j<9;j++){
+				System.out.println(Pieces[i][j].printInfo());
+			}
 		}
-		for(int i=0;i<COUNT;i++){
+		/*for(int i=0;i<COUNT;i++){
 			System.out.println(blackPieces[i].printInfo());
-		}
+		}*/
 		
 	}	
 }

@@ -2,7 +2,7 @@ package board;
 
 public class ChessBoard{
 	// Object attributes
-	
+	//private ChessBoard[][] board = new ChessBoard[8][8]
 	private String typeName;
 	private String newColor;
 	private int posX;
@@ -10,17 +10,26 @@ public class ChessBoard{
 	private char posYChar;
 	
 	// Object Methods
-	public void ChessBoard(String c, String p, int a, int b){
-		setColor(c);
+	public void ChessBoard(String p, int a, int b){
+		if(a == 3 || a == 4 || a == 5 || a == 6){
+			
+		}else{
+		setColor(a);
 		setPieceType(p);
 		setPosition(a,b);		
+		}
 	}
+
 	
 	public String getPosition(){
 		
 		return "Piece position: " + posX + "," + posYChar;
 		
 	}
+	/*public void setBoard(int x, int y){
+		
+		board[x][y] = 
+	}*/
 	public void setPosition(int x, int y){
 		posX = x;
 		posY = y;
@@ -50,12 +59,18 @@ public class ChessBoard{
 			posYChar = 'H';
 		}
 		
+		
 	}
 	public String getColor(){
 		return newColor;
 	}
-	public void setColor(String color){
-		newColor = color;
+	public void setColor(int x){
+		if(x==1 || x==2){
+			newColor = "white";
+		}
+		if(x==7 || x==8){
+			newColor = "black";
+		}
 	}
 	public String getPieceType(){
 		return typeName;
