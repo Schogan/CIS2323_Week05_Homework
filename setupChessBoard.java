@@ -13,71 +13,39 @@ public class setupChessBoard{
 		int posX=0;
 		int posY=0;
 		
-		//while (countA<){
-			for(int i=1;i<9;i++){
-				for(int j=1;j<9;j++){
-					if(i==2 || i==7){
-						type = "pawn";
-					}
-					if((i==1 || i==8) && (j==1||j==8)){
-						type = "rook";
-					}
-					if((i==1 || i==8) && (j==2||j==7)){
-						type = "knight";
-					}
-					if((i==1 || i==8) && (j==3||j==6)){
-						type = "bishop";
-					}
-					if((i==1 || i==8) && j==4){
-						type = "queen";
-					}
-					if((i==1 || i==8) && j==5){
-						type = "king";
-					}
-					
-					Pieces[i][j] = new ChessBoard();
-					Pieces[i][j].ChessBoard(type, i, j);
-					countA++;
+		for(int i=0;i<8;i++){
+			for(int j=0;j<8;j++){
+				if(i==1 || i==6){
+					type = "pawn";
 				}
-			}
-		//}
-		/*while (countB<COUNT){	
-			for(int i=8;i>6;i--){
-				for(int j=1;j<9;j++){
-					if(i==7){
-						type = "pawn";
-					}
-					if(i==8 && (j==1||j==8)){
-						type = "rook";
-					}
-					if(i==8 && (j==2||j==7)){
-						type = "knight";
-					}
-					if(i==8 && (j==3||j==6)){
-						type = "bishop";
-					}
-					if(i==8 && j==4){
-						type = "queen";
-					}
-					if(i==8 && j==5){
-						type = "king";
-					}
-					
-					blackPieces[countB] = new ChessBoard();
-					blackPieces[countB].ChessBoard("Black", type, i, j);
-					countB++;
+				if((i==0 || i==7) && (j==0||j==7)){
+					type = "rook";
 				}
+				if((i==0 || i==7) && (j==1||j==6)){
+					type = "knight";
+				}
+				if((i==0 || i==7) && (j==2||j==5)){
+					type = "bishop";
+				}
+				if((i==0 || i==7) && j==3){
+					type = "queen";
+				}
+				if((i==0 || i==7) && j==4){
+					type = "king";
+				}
+				
+				Pieces[i][j] = new ChessBoard();
+				Pieces[i][j].ChessBoard(type, i, j);
+					
 			}
-		}*/
+		}
+	
 		
-		for(int i=1;i<9;i++){
-			for(int j=1;j<9;j++){
+		for(int i=0;i<8;i++){
+			for(int j=0;j<8;j++){
 				System.out.println(Pieces[i][j].printInfo());
 			}
 		}
-		/*for(int i=0;i<COUNT;i++){
-			System.out.println(blackPieces[i].printInfo());
-		}*/
-		
+				
 	}	
 }

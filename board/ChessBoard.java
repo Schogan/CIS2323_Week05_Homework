@@ -11,7 +11,7 @@ public class ChessBoard{
 	
 	// Object Methods
 	public void ChessBoard(String p, int a, int b){
-		if(a == 3 || a == 4 || a == 5 || a == 6){
+		if(a == 2 || a == 3 || a == 4 || a == 5){
 			
 		}else{
 		setColor(a);
@@ -31,31 +31,57 @@ public class ChessBoard{
 		board[x][y] = 
 	}*/
 	public void setPosition(int x, int y){
-		posX = x;
+		posX = x+1;
 		posY = y;
 		
-		if (posY == 1){
-			posYChar = 'A';
+		/*posX
+		if (posX == 0){
+			posX =;
 		}
-		if (posY == 2){
+		if (posX == 1){
 			posYChar = 'B';
 		}
-		if (posY == 3){
+		if (posX == 2){
 			posYChar = 'C';
 		}
-		if (posY == 4){
+		if (posX == 3){
 			posYChar = 'D';
 		}
-		if (posY == 5){
+		if (posX == 4){
 			posYChar = 'E';
 		}
-		if (posY == 6){
+		if (posX == 5){
 			posYChar = 'F';
 		}
-		if (posY == 7){
+		if (posX == 6){
 			posYChar = 'G';
 		}
-		if (posY == 8){
+		if (posX == 7){
+			posYChar = 'H';
+		}*/
+		//posY
+		if (posY == 0){
+			posYChar = 'A';
+		}
+		if (posY == 1){
+			posYChar = 'B';
+		}
+		if (posY == 2){
+			posYChar = 'C';
+		}
+		if (posY == 3){
+			posYChar = 'D';
+		}
+		if (posY == 4){
+			posYChar = 'E';
+		}
+		if (posY == 5){
+			posYChar = 'F';
+		}
+		if (posY == 6){
+			posYChar = 'G';
+		}
+		if (posY == 7){
 			posYChar = 'H';
 		}
 		
