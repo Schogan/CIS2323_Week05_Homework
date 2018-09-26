@@ -39,7 +39,7 @@ public class ChessBoard{
 					
 			}
 		}
-		printBoard();
+		//printBoard();
 	}
 	public void makeChessBoard(String p, int a, int b){
 		if(a == 2 || a == 3 || a == 4 || a == 5){
