@@ -39,6 +39,7 @@ public class ChessBoard{
 					
 			}
 		}
+		printBoard();
 	}
 	public void makeChessBoard(String p, int a, int b){
 		if(a == 2 || a == 3 || a == 4 || a == 5){
@@ -56,12 +57,21 @@ public class ChessBoard{
 		return "Piece position: " + posX + "," + posYChar;
 		
 	}
-	public String printBoard(){
+	public void printBoard(){
 		for(int i=0;i<8;i++){
 			for(int j=0;j<8;j++){
 				System.out.println(Pieces[i][j].printInfo());
 			}
 		}
+		
+	}
+	public void pBoard(){
+		for(int i=0;i<8;i++){
+			for(int j=0;j<8;j++){
+				System.out.println(Pieces[i][j].printInfo());
+			}
+		}
+		
 	}
 	
 	public void setPosition(int x, int y){

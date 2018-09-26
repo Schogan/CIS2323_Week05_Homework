@@ -23,7 +23,7 @@ public class setupChessBoard{
 			System.out.println("=================================== \n");
 			System.out.println("What would you like to do? \n");
 			System.out.println("y) Make a new chess board? \n");
-			System.out.println("p) Print board \n");
+			//System.out.println("p) Print board \n");
 			//System.out.println("c) Mark list done \n");
 			//System.out.println("d) Print count of ToDo \n");
 			System.out.println("=================================== \n");
@@ -33,10 +33,11 @@ public class setupChessBoard{
 			
 			if(choice=='y'){
 				new board.ChessBoard();
+				//ChessBoard.printBoard();
 			}
-			if(choice=='p'){
-				System.out.println(board.Chessboard.printBoard());
-			}
+			/*if(choice=='p'){
+				ChessBoard.printBoard();
+			}*/
 		}
 		/*int countA=0;
 		int countB=0;
