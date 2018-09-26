@@ -16,7 +16,7 @@ public class setupChessBoard{
 		
 		
 		boolean cont = true;
-		//Chessboard newBoard = new ChessBoard();
+		ChessBoard board = new ChessBoard();
 		
 		
 		while(cont){
@@ -32,8 +32,8 @@ public class setupChessBoard{
 			inputDevice.nextLine();
 			
 			if(choice=='y'){
-				new board.ChessBoard();
-				//ChessBoard.printBoard();
+				//ChessBoard board = new ChessBoard();
+				board.ChessBoard();
 			}
 			/*if(choice=='p'){
 				ChessBoard.printBoard();
