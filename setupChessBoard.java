@@ -1,4 +1,5 @@
 import board.*;
+import piece.*;
 import java.util.Scanner;
 public class setupChessBoard{
 	public static void main(String[] args){
@@ -37,6 +38,9 @@ public class setupChessBoard{
 			}
 			if(choice=='p'){
 				board.printBoard();
+			}
+			if(choice=='r'){
+				
 			}
 		}
 		/*int countA=0;
